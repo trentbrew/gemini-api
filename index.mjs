@@ -35,7 +35,9 @@ app.post("/v1/dj", async (req, res) => {
     const response = await dj(prompt);
     const payload = response;
     console.log("\n\npayload:\n\n", payload);
-    res.json(payload);
+    const finalPayload = JSON.parse(payload);
+    console.log("\n\nfinalPayload:\n\n", finalPayload);
+    res.json(finalPayload);
   } else {
     res.status(400).json({ error: "Invalid input" });
   }

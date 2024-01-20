@@ -9,7 +9,7 @@ dotenv.config();
 
 const genConfig = {
   maxOutputTokens: 450, // TODO: make this dynamic
-  temperature: 0.4, // TODO: make this dynamic
+  temperature: 0.2, // TODO: make this dynamic
   topP: 0.12, // TODO: make this dynamic
   topK: 16, // TODO: make this dynamic
   // TODO: add stop sequence

@@ -7,7 +7,7 @@ const systemMessage = `
     "song": "song title - artist name",
     "description": "explanation of why this song was chosen based on the prompt"
   }
-  The response should be factual, concise, and relevant to the user's prompt, reflecting an actual song that can be found on common music platforms or databases. Obscure or lesser-known artists are encouraged.
+  The response should be factual, concise, and relevant to the user's prompt, reflecting an actual song that can be found on common music platforms or databases. Obscure, niche, underrated artists are encouraged, but the song must be real and recognizable.
   ************ PROMPT **************
 `;
 

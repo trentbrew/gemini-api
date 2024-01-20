@@ -1,3 +1,4 @@
+import { fetchSong } from "./spotify.mjs";
 import dj from "./dj.mjs";
 
 import { fileURLToPath } from "url";
@@ -23,21 +24,16 @@ app.get("/", async (req, res) => {
   res.send("`GET /` Welcome to DJ Gemini. Nothing to see here(:");
 });
 
-app.get("/v1", async (req, res) => {
-  res.send("`GET /v1` warmer...");
-});
-
 app.post("/v1/dj", async (req, res) => {
   console.log("\n\nthinking...\n\n");
   const prompt = req.body.prompt;
   console.log("\n\nreq.body.prompt:\n\n", prompt);
   if (prompt) {
     const response = await dj(prompt);
-    const payload = response;
-    console.log("\n\npayload:\n\n", payload);
-    const finalPayload = JSON.parse(payload);
-    console.log("\n\nfinalPayload:\n\n", finalPayload);
-    res.json(finalPayload);
+    console.log("\n\nresponse:\n\n", response);
+    const parsedResponse = JSON.parse(response);
+    console.log("\n\nparsedResponse:\n\n", parsedResponse);
+    res.json(parsedResponse);
   } else {
     res.status(400).json({ error: "Invalid input" });
   }

@@ -9,7 +9,7 @@ const systemMessage = `
     "description": "explanation of why this song was chosen based on the prompt"
   }
   \`\`\`json
-  The response should be factual, concise, and relevant to the user's prompt, reflecting an actual song that can be found on common music platforms or databases.
+  The response should be factual, concise, and relevant to the user's prompt, reflecting an actual song that can be found on common music platforms or databases. Obscure or lesser-known artists are encouraged.
   ************ PROMPT **************
 `;
 

@@ -19,12 +19,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
+const baseUrl = process.env.BASE_URL;
+
 app.get("/", async (req, res) => {
   console.log("Welcome(:");
   res.send("`GET /` Welcome to DJ Gemini. Nothing to see here(:");
 });
 
-app.post("/v1/dj", async (req, res) => {
+app.post(`/v1/dj`, async (req, res) => {
   console.log("\n\nthinking...\n\n");
   const prompt = req.body.prompt;
   console.log("\n\nreq.body.prompt:\n\n", prompt);
